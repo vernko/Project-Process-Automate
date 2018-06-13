@@ -1,6 +1,18 @@
 class BaseClass
   def initialize
     @driver =  Selenium::WebDriver.for :chrome
+    @url = "https://applynow.chase.com/FlexAppWeb/renderApp.do?SPID=FQYC&CELL=6TKW&PROMO=DF01"
+    @first_name = Faker::Name.first_name
+    @last_name = Faker::Name.last_name
+    @mailing_address = Faker::Address.street_address
+    @city = Faker::Address.city
+    @zipcode = Faker::Address.zip
+    @marital_status =  Faker::Demographic.marital_status
+  end
+
+  def setup
+    @driver.manage.window.maximize
+    @driver.navigate.to @url
   end
 
   def find_element_with_wait(what, time = 5)
