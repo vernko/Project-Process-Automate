@@ -5,9 +5,22 @@ class BaseClass
     @first_name = Faker::Name.first_name
     @last_name = Faker::Name.last_name
     @mailing_address = Faker::Address.street_address
-    @city = Faker::Address.city
-    @zipcode = Faker::Address.zip
+    @city = "Springville"
+    @zipcode = "84663"
+    @gross_income = Faker::Number.number(5)
+    @employer = Faker::Company.name
     @marital_status =  Faker::Demographic.marital_status
+    @primary_phone = Faker::PhoneNumber.cell_phone
+    @email =Faker::Internet.free_email
+    @dob = "05061980"
+    @social = "643130001"
+    @mothers_maiden_name = Faker::Name.last_name
+    @authorized_user_first_name = Faker::Name.first_name
+    @authorized_user_last_name = Faker::Name.last_name
+    @authorized_user_dob = "04061970"
+    @authorized_user_mailing_address = Faker::Address.street_address
+    @authorized_user_city = "Springville"
+    @authorized_user_zipcode = "84663"
   end
 
   def setup

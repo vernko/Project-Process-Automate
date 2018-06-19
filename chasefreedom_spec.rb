@@ -8,9 +8,9 @@ describe "Input initial information in Chase application" do
     @browser.setup
   end
 
-  # after(:each) do
-  #   @browser.close_browser
-  # end
+  after(:each) do
+    @browser.close_browser
+  end
 
   it 'inputs information' do
     @browser.personal_info
