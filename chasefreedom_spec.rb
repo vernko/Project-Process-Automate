@@ -15,7 +15,7 @@ describe "Input initial information in Chase application" do
   it 'inputs information' do
     @browser.personal_info
     @browser.financial_info
-    @browser.security_info
-    @browser.review_submit
+    # @browser.security_info
+    # @browser.review_submit
   end
 end

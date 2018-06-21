@@ -20,14 +20,8 @@ class ChaseFreedom < BaseClass
     type_things(city_field, @city)
     sleep 1
 
-    # state_selector
-    #### Interact with the drop down box
     state_selector_list = @driver.find_element(:xpath => "//select[@name='value(sState1)']")
-
-    #### Extract all options from the select box
     options = state_selector_list.find_elements(:tag_name => "option")
-
-    #### Select the option “UT”
     options.each do |g|
       if g.text == "UT"
       g.click
@@ -47,26 +41,50 @@ class ChaseFreedom < BaseClass
 
   def financial_info
     sleep 1
-    # checking_box = @driver.find_element(:xpath => "//div[@class='jpui-checkbox-radio']")
+    # checking_box = @driver.find_element(:id, "checking-checkbox")
     # checking_box = @wait.until {
-    #   element = @driver.find_element(:xpath => "//input[@value='checking']")
+    #   element = @driver.find_element(:id, "checking-checkbox")
     #   element if element.displayed?
     # }
     # checking_box.click
     
-    # saving_box = @driver.find_element(:xpath => "//input[@for='savings-checkbox']").click
+    # saving_box = @driver.find_element(:xpath => "//input[@class='jpui-checkbox-radio'][1]")
+    # # saving_box = @wait_until {
+    # #   element = @driver.find_element(:xpath => "//input[@id='savings-checkbox']")
+    # #   element if element.displayed?
+    # # }
+    # saving_box.click
 
     # residence_selector
     # if select rent or other brings up Monthy Housing Payment field
-    housing_payment = @driver.find_element(:xpath => "//select[@name='value(sHousingType)']")
-    options = housing_payment.find_elements(:tag_name => "option")
+    housing_type = @driver.find_element(:xpath => "//select[@name='value(sHousingType)']")
+    options = housing_type.find_elements(:tag_name => "option")
     options.each do |g|
       if g.text == "Own"
       g.click
       break
       end
     end
-    # type_things(housing_payment, @housing_payment)
+
+    # options.each do |g|
+    #   if g.text == "Rent"
+    #   g.click
+    #   sleep 2
+    #   housing_payment = @driver.find_element(:xpath => "//input[@name='value(sMonthlyMortgage)']")
+    #   type_things(housing_payment, @housing_payment)
+    #   break
+    #   end
+    # end
+
+    # options.each do |g|
+    #   if g.text == "Other"
+    #   g.click
+    #   housing_payment = @driver.find_element(:xpath => "//input[@name='value(sMonthlyMortgage)']")
+    #   type_things(housing_payment, @housing_payment)
+    #   sleep 2
+    #   break
+    #   end
+    # end
     sleep 1
 
     gross_income = @driver.find_element(:xpath => "//input[@name='value(sAnnualIncome)']")
@@ -120,39 +138,39 @@ class ChaseFreedom < BaseClass
   end
 
   def review_submit
-    authorized_user_first_name_field = @driver.find_element(:xpath => "//input[@name='value(sSecondaryFirstName1)']")
-    type_things(authorized_user_first_name_field, @authorized_user_first_name)
-    sleep 1
+    # authorized_user_first_name_field = @driver.find_element(:xpath => "//input[@name='value(sSecondaryFirstName1)']")
+    # type_things(authorized_user_first_name_field, @authorized_user_first_name)
+    # sleep 1
 
-    authorized_user_last_name_field = @driver.find_element(:xpath => "//input[@name='value(sSecondaryLastName1)']")
-    type_things(authorized_user_last_name_field, @authorized_user_last_name)
-    sleep 1
+    # authorized_user_last_name_field = @driver.find_element(:xpath => "//input[@name='value(sSecondaryLastName1)']")
+    # type_things(authorized_user_last_name_field, @authorized_user_last_name)
+    # sleep 1
 
-    authorized_user_dob_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedDOB1)']")
-    type_things(authorized_user_dob_field, @authorized_user_dob)
-    sleep 1
+    # authorized_user_dob_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedDOB1)']")
+    # type_things(authorized_user_dob_field, @authorized_user_dob)
+    # sleep 1
 
-    authorized_user_mailing_address_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedStreetAddr11)']")
-    type_things(authorized_user_mailing_address_field, @authorized_user_mailing_address)
-    sleep 1
+    # authorized_user_mailing_address_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedStreetAddr11)']")
+    # type_things(authorized_user_mailing_address_field, @authorized_user_mailing_address)
+    # sleep 1
 
-    authorized_user_city_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedCity1)']")
-    type_things(authorized_user_city_field, @authorized_user_city)
-    sleep 1
+    # authorized_user_city_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedCity1)']")
+    # type_things(authorized_user_city_field, @authorized_user_city)
+    # sleep 1
 
-    authorized_state_selector_list = @driver.find_element(:xpath => "//select[@name='value(sAuthorizedState11)']")
-    options = authorized_state_selector_list.find_elements(:tag_name => "option")
-    options.each do |g|
-      if g.text == "UT"
-      g.click
-      break
-      end
-    end
-    sleep 1
+    # authorized_state_selector_list = @driver.find_element(:xpath => "//select[@name='value(sAuthorizedState11)']")
+    # options = authorized_state_selector_list.find_elements(:tag_name => "option")
+    # options.each do |g|
+    #   if g.text == "UT"
+    #   g.click
+    #   break
+    #   end
+    # end
+    # sleep 1
 
-    authorized_user_zipcode_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedZip1)']")
-    type_things(authorized_user_zipcode_field, @authorized_user_zipcode)
-    sleep 1
+    # authorized_user_zipcode_field = @driver.find_element(:xpath => "//input[@name='value(sAuthorizedZip1)']")
+    # type_things(authorized_user_zipcode_field, @authorized_user_zipcode)
+    # sleep 1
 
     #OPTIONAL
     # Transfer Balances
@@ -166,6 +184,10 @@ class ChaseFreedom < BaseClass
     terms_agreement_box.click
 
     submit_button = @driver.find_element(:xpath => "//button[@id='flexappsubmit']")
-    sleep 4
+    submit_button.click
+    sleep 10
+    
+    @driver.screenshot_as(:png)
+    @driver.save_screenshot('status.png')
   end
 end
