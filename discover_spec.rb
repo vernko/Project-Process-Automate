@@ -2,9 +2,9 @@ require 'selenium-webdriver'
 require 'rspec'
 require_relative 'chasefreedom'
 
-describe "Input initial information in Chase application" do
+describe "Fill out Discover's card application" do
   before(:each) do
-    @browser = ChaseFreedom.new
+    @browser = Discover.new
     @browser.setup
   end
 
@@ -13,9 +13,9 @@ describe "Input initial information in Chase application" do
   end
 
   it 'inputs information' do
-    @browser.personal_info
-    @browser.financial_info
-    @browser.security_info
+    @browser.input_intial_info
+    @browser.input_general_info
+    @browser.input_final_info
     @browser.review_submit
   end
 end
