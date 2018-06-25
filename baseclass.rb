@@ -2,7 +2,6 @@ class BaseClass
   def initialize
     @driver = Selenium::WebDriver.for :chrome
     @wait = Selenium::WebDriver::Wait.new(:timeout => 15)
-    @url = "https://applynow.chase.com/FlexAppWeb/renderApp.do?SPID=FQYC&CELL=6TKW&PROMO=DF01"
     @first_name = Faker::Name.first_name
     @last_name = Faker::Name.last_name
     @mailing_address = Faker::Address.street_address
@@ -24,12 +23,7 @@ class BaseClass
     @authorized_user_city = "Payson"
     @authorized_user_zipcode = "84651"
   end
-
-  def setup
-    @driver.manage.window.maximize
-    @driver.navigate.to @url
-  end
-
+  
   def find_element_with_wait(what, time = 5)
     wait = Selenium::WebDriver::Wait.new(timeout: time) # seconds
     begin

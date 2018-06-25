@@ -2,7 +2,13 @@ require 'selenium-webdriver'
 require 'faker'
 require_relative 'baseclass'
 
-class Discover < BaseClass
+class DiscoverCard < BaseClass
+  def initialize_discover
+    @url = 'https://www.discovercard.com/application/apply?srcCde=GAYP'
+    @driver.manage.window.maximize
+    @driver.navigate.to @url
+  end
+
   def input_intial_info
     first_name_field = @driver.find_element(:xpath => "//input[@name='firstName']")
     type_things(first_name_field, @first_name)
@@ -10,14 +16,21 @@ class Discover < BaseClass
 
     last_name_field = @driver.find_element(:xpath => "//input[@name='lastName']")
     type_things(last_name_field, @last_name)
+    sleep 2
+
+    middle_name_field = @driver.find_element(:xpath => "//input[@name='middleName']")
+    middle_name_field.click
     sleep 1
 
-    pick_card_design = @driver.find_element(:xpath => "//a[@class='card_thumb selected']")
-    pick_card_design.click
+    # pick_card_design = @driver.find_element(:xpath => "//ul[@class='cards']")
+    # sleep 2
+    # pick_card_design.click
+    # sleep 2
+    # throwing an error, page isn't available at this time, try again in 24 hrs.
 
     continue_button = @driver.find_element(:xpath => "//input[@title='Continue']")
     continue_button.click
-    sleep 2
+    sleep 5
   end
 
   def input_general_info

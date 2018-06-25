@@ -1,11 +1,11 @@
 require 'selenium-webdriver'
 require 'rspec'
-require_relative 'chasefreedom'
+require_relative 'discover'
 
 describe "Fill out Discover's card application" do
   before(:each) do
-    @browser = Discover.new
-    @browser.setup
+    @browser = DiscoverCard.new
+    @browser.initialize_discover
   end
 
   after(:each) do

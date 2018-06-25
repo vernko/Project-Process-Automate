@@ -3,7 +3,13 @@ require 'faker'
 require_relative 'baseclass'
 
 class ChaseFreedom < BaseClass
-  def personal_info
+    def initialize_chase_freedom
+      @url = 'https://applynow.chase.com/FlexAppWeb/renderApp.do?SPID=FQYC&CELL=6TKW&PROMO=DF01'
+      @driver.manage.window.maximize
+      @driver.navigate.to @url
+    end
+
+    def personal_info
     first_name_field = @driver.find_element(:xpath => "//input[@name='value(sFirstName)']")
     type_things(first_name_field, @first_name)
     sleep 1

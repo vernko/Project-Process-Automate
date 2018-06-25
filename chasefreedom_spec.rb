@@ -5,7 +5,7 @@ require_relative 'chasefreedom'
 describe "Input initial information in Chase application" do
   before(:each) do
     @browser = ChaseFreedom.new
-    @browser.setup
+    @browser.initialize_chase_freedom
   end
 
   after(:each) do
