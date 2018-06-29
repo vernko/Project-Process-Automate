@@ -89,6 +89,7 @@ class ClientsController < ApplicationController
                                      :email_address,
                                      :housing_type,
                                      :housing_payment,
+                                     :birth_date,
                                      :gross_income,
                                      :employer,
                                      :social_security_number,

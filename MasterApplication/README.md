@@ -1,24 +1,34 @@
-# README
+# Project-Process-Automate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Saleforce Information Code gets a seperate file or is in the baseclass
+# Set up better scructure for classes and inheriting
+  * "Browswer/driver" runs/navigates
+  * "Chasefreedom" class performs functions
+  Information Needed:
+    * First/last name
+    * Address
+      * Mailing
+      * City
+      * State
+      * Zip
+    * Social
+    * Martital Status
+    * Income
+      * Click for Checkings/Savings
+      
+    * Rent/Own
+    * Monthly Payment
+    * DOB
+    * Employment Info
+# Selector for multiple Application Site Info
+# Return pending, denied, or approved on status
+  * Screenshot for now, find where to store it
+  * Later pull data
+# Make UI App so other users can run this
+  * See if want a website or an app on the computers
+# Logs to see if any places in process fails
+# Once submit application run automation
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# QUESTIONS
+  * Does the information from form need to go to Salesforce direclty or is it going to underwriting.
+  * How does information form landing page go through rest of process

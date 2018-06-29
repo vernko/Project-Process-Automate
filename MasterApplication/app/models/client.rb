@@ -11,6 +11,7 @@ class Client < ApplicationRecord
                         :email_address,
                         :housing_type,
                         :housing_payment,
+                        :birth_date,
                         :gross_income,
                         :employer,
                         :social_security_number,
@@ -36,6 +37,7 @@ class Client < ApplicationRecord
     @housing_payment = housing_payment
     @gross_income = gross_income
     @employer = employer
+    @birth_date = birth_date
     @social_security_number = social_security_number
     @mothers_maiden_name = mothers_maiden_name
   end
@@ -62,7 +64,6 @@ class Client < ApplicationRecord
   def close_browser
       @driver.quit
   end
-
 
   def personal_info
     first_name_field = @driver.find_element(:xpath => "//input[@name='value(sFirstName)']")
@@ -178,15 +179,15 @@ class Client < ApplicationRecord
     sleep 1
 
     email_field = @driver.find_element(:xpath => "//input[@name='value(sEMailAddr2)']")
-    type_things(email_field, @email)
+    type_things(email_field, @email_address)
     sleep 1
 
     dob_field = @driver.find_element(:xpath => "//input[@name='value(sDOB)']")
-    type_things(dob_field, @dob)
+    type_things(dob_field, @birth_date)
     sleep 1
 
     social_field = @driver.find_element(:xpath => "//input[@name='value(sSSN)']")
-    type_things(social_field, @social)
+    type_things(social_field, @social_security_number)
     sleep 1
 
     mothers_maiden_name_field = @driver.find_element(:xpath => "//input[@name='value(sMaidenName)']")
