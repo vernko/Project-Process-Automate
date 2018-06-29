@@ -24,6 +24,11 @@ class ClientsController < ApplicationController
   # POST /clients
   # POST /clients.json
   def create
+    @automation = ChaseFreedom.new(client_params)
+    @automation.personal_info
+    @automation.financial_info
+    @automation.security_info
+    @automation.review_submit
     @client = Client.new(client_params)
 
     respond_to do |format|

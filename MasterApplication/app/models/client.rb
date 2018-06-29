@@ -1,6 +1,4 @@
 class Client < ApplicationRecord
-require 'selenium-webdriver'
-require_relative 'baseclass'
   validates_presence_of :first_name,
                         :last_name, :mailing_address,
                         :city,

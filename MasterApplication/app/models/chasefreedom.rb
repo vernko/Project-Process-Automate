@@ -3,11 +3,26 @@ require 'faker'
 require_relative 'baseclass'
 
 class ChaseFreedom < BaseClass
-  def initialize_chase_freedom
+  def initialize_chase_freedom(first_name, last_name, mailing_address, city, zipcode, state, primary_phone, email_address, housing_type, housing_payment, gross_income, employer, social_security_number, mothers_maiden_name)
     @url = 'https://applynow.chase.com/FlexAppWeb/renderApp.do?SPID=FQYC&CELL=6TKW&PROMO=DF01'
     @driver.manage.window.maximize
     @driver.navigate.to @url
+    @first_name = first_name
+    @last_name = last_name
+    @mailing_address = mailing_address
+    @city = city
+    @zipcode = zipcode
+    @state = state
+    @primary_phone = primary_phone 
+    @email_address = email_address
+    @housing_type = housing_type
+    @housing_payment = housing_payment
+    @gross_income = gross_income
+    @employer = employer
+    @social_security_number = social_security_number
+    @mothers_maiden_name = mothers_maiden_name
   end
+
 
   def personal_info
     first_name_field = @driver.find_element(:xpath => "//input[@name='value(sFirstName)']")
