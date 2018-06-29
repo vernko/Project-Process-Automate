@@ -14,6 +14,7 @@ class ClientsController < ApplicationController
 
   # GET /clients/new
   def new
+    puts "first"
     @client = Client.new
   end
 
@@ -24,12 +25,16 @@ class ClientsController < ApplicationController
   # POST /clients
   # POST /clients.json
   def create
-    @automation = ChaseFreedom.new(client_params)
-    @automation.personal_info
-    @automation.financial_info
-    @automation.security_info
-    @automation.review_submit
+    puts "second"
     @client = Client.new(client_params)
+    puts "third"
+    @client.populate
+    # @automation = Client.new(client_params)
+    @client.personal_info
+    @client.financial_info
+    @client.security_info
+    @client.review_submit
+    # @client = Client.new(client_params)
 
     respond_to do |format|
       if @client.save
