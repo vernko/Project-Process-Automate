@@ -1,0 +1,57 @@
+@import "bootstrap";
+
+body {
+  .background-form {
+    background: url("business_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// .background-form {
+//   background: url("business_background.jpg");
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+// }
+
+.card {
+  padding: 20px;
+  background-color: #f6f6f7;
+  border-color: white;
+  width: 35rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+
+input {
+  width: 100%;
+  padding: 5px;
+}
+
+.form-group {
+  margin: 6px;
+}
+
+ .btn-primary {
+   background-color: #2baea4;
+   border-color: rgb(179, 177, 177);
+   color: #333;
+
+   &:hover {
+     background-color: #1d837a;
+     border-color: rgb(179, 177, 177);
+   }
+ }
+
+ .back-link {
+   color: rgb(179, 177, 177);
+ }

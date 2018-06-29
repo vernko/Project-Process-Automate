@@ -27,3 +27,9 @@
 # Make UI App so other users can run this
   * See if want a website or an app on the computers
 # Logs to see if any places in process fails
+# Once submit application run automation
+
+# QUESTIONS
+  * Does the information from form need to go to Salesforce direclty or is it going to underwriting.
+  * How does information form landing page go through rest of process
+  

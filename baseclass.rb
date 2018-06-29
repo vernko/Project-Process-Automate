@@ -15,13 +15,13 @@ class BaseClass
     @email =Faker::Internet.free_email
     @dob = "05061980"
     @social = "643130001"
-    @mothers_maiden_name = Faker::Name.last_name
-    @authorized_user_first_name = Faker::Name.first_name
-    @authorized_user_last_name = Faker::Name.last_name
-    @authorized_user_dob = "04061970"
-    @authorized_user_mailing_address = Faker::Address.street_address
-    @authorized_user_city = "Payson"
-    @authorized_user_zipcode = "84651"
+    # @mothers_maiden_name = Faker::Name.last_name
+    # @authorized_user_first_name = Faker::Name.first_name
+    # @authorized_user_last_name = Faker::Name.last_name
+    # @authorized_user_dob = "04061970"
+    # @authorized_user_mailing_address = Faker::Address.street_address
+    # @authorized_user_city = "Payson"
+    # @authorized_user_zipcode = "84651"
   end
   
   def find_element_with_wait(what, time = 5)

@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @client.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @client.last_name %>
+</p>
+
+<p>
+  <strong>Mailing address:</strong>
+  <%= @client.mailing_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @client.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @client.zipcode %>
+</p>
+
+<p>
+  <strong>Primary phone:</strong>
+  <%= @client.primary_phone %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @client.email_address %>
+</p>
+
+<p>
+  <strong>Housing type:</strong>
+  <%= @client.housing_type %>
+</p>
+
+<p>
+  <strong>Housing payment:</strong>
+  <%= @client.housing_payment %>
+</p>
+
+<p>
+  <strong>Gross income:</strong>
+  <%= @client.gross_income %>
+</p>
+
+<p>
+  <strong>Employer:</strong>
+  <%= @client.employer %>
+</p>
+
+<p>
+  <strong>Marital status:</strong>
+  <%= @client.marital_status %>
+</p>
+
+<p>
+  <strong>Social security number:</strong>
+  <%= @client.social_security_number %>
+</p>
+
+<p>
+  <strong>Mothers maiden name:</strong>
+  <%= @client.mothers_maiden_name %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

@@ -1,5 +1,6 @@
 require 'selenium-webdriver'
 require 'rspec'
+require_relative 'baseclass'
 require_relative 'chasefreedom'
 
 describe "Input initial information in Chase application" do

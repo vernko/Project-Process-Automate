@@ -181,6 +181,6 @@ class DiscoverCard < BaseClass
     sleep 10
     
     @driver.screenshot_as(:png)
-    @driver.save_screenshot('status.png')
+    @driver.save_screenshot('discover_status.png')
   end
 end
