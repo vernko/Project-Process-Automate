@@ -1,101 +1,137 @@
-<div class="background-form">
-  <%= form_with(model: client, local: true) do |form| %>
-    <% if client.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
 
-        <ul>
+      <ul>
+
         <% client.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
-        </ul>
-      </div>
-    <% end %>
 
-    <div class="container">
-      <div class="card">
-      <h1>Fund Your Business</h1>
-      <hr>
-        <div class="form-row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <%= form.text_field :first_name, id: :client_first_name, class: "", placeholder: "First Name" %>
-            </div>
-            
-            <div class="form-group">
-              <%= form.text_field :last_name, id: :client_last_name, class: "form-field", placeholder: "Last Name" %>
-            </div>
+      </ul>
 
-            <div class="form-group">
-              <%= form.text_field :primary_phone, id: :client_primary_phone, class: "form-field", placeholder: "Primary Phone Number" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :email_address, id: :client_email_address, class: "form-field", placeholder: "Email Address" %>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="form-group">
-              <%= form.text_field :mailing_address, id: :client_mailing_address, class: "form-field", placeholder: "Mailing Address" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :city, id: :client_city, class: "form-field", placeholder: "City" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.select :state, options_for_select(us_states) %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :zipcode, id: :client_zipcode, class: "form-field", placeholder: "Zipcode" %>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <%= form.select :housing_type, options_for_select(housing_type_selector) %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :housing_payment, id: :client_housing_payment, class: "form-field", placeholder: "House Payment" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :gross_income, id: :client_gross_income, class: "form-field", placeholder: "Gross Income" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :employer, id: :client_employer, class: "form-field", placeholder: "Employer" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :social_security_number, id: :client_social_security_number, class: "form-field", placeholder: "Social Security Number" %>
-            </div>
-
-            <div class="form-group">
-              <%= form.text_field :mothers_maiden_name, id: :client_mothers_maiden_name, class: "form-field", placeholder: "Mother's Maiden Name" %>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <p>
-              I intentionally left this spot is instructions, terms, conditions, or any additonal fields.
-            </p>
-
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-            </p>
-          </div>
-        </div>
-
-        <div class="actions">
-          <%= form.submit "Start Fueling Your Dreams Now", class: 'btn btn-primary btn-block' %>
-        </div>
-      </div>
     </div>
+    
   <% end %>
-</div>
+
+  <div class="container">
+
+    <div class="card">
+
+    <h1 class="application-header">Fund Your Business</h1>
+    <hr>
+
+      <div class="form-row">
+
+        <div class="col-md-6">
+
+          <div class="form-group">
+            <%= form.text_field :first_name, id: :client_first_name, class: "form-field", placeholder: "First Name" %>
+          </div>
+          
+          <div class="form-group">
+            <%= form.text_field :last_name, id: :client_last_name, class: "form-field", placeholder: "Last Name" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :primary_phone, id: :client_primary_phone, class: "form-field", placeholder: "Phone #: 4352223434" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :email_address, id: :client_email_address, class: "form-field", placeholder: "Email Address" %>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="form-group">
+            <%= form.text_field :mailing_address, id: :client_mailing_address, class: "form-field", placeholder: "Mailing Address" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :city, id: :client_city, class: "form-field", placeholder: "City" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.select :state, options_for_select(us_states) %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :zipcode, id: :client_zipcode, class: "form-field", placeholder: "Zipcode" %>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="col-md-6">
+        
+          <div class="form-group">
+            <%= form.select :employment_status, options_for_select(employment_status_selector) %>
+          </div>
+          
+          <div class="form-group">
+            <%= form.text_field :employer, id: :client_employer, class: "form-field", placeholder: "Employer" %>
+          </div>
+          
+          <div class="form-group">
+            <%= form.text_field :gross_income, id: :client_gross_income, class: "form-field", placeholder: "Gross Income" %>
+          </div>
+
+        </div>
+        
+        <div class="col-md-6">
+        
+          <div class="form-group">
+            <%= form.select :housing_type, options_for_select(housing_type_selector) %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :housing_payment, id: :client_housing_payment, class: "form-field", placeholder: "House Payment" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.select :marital_status, options_for_select(marital_status_selector) %>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="form-group">
+            <%= form.text_field :birth_date, id: :client_birth_date, class: "form-field", placeholder: "Birthday: mmddyyyy" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :social_security_number, id: :client_social_security_number, class: "form-field", placeholder: "Social Security Number" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :mothers_maiden_name, id: :client_mothers_maiden_name, class: "form-field", placeholder: "Mother's Maiden Name" %>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <p>
+            I intentionally left this spot is instructions, terms, conditions, or any additonal fields.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Start Fueling Your Dreams Now", class: 'btn btn-primary btn-block' %>
+      </div>
+
+    </div>
+
+  </div>
+
+<% end %>

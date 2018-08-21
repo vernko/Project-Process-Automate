@@ -1,0 +1,78 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-07-11 15:16:53.965172'
+    - '2018-07-11 15:16:53.965172'
+
+---
+clients:
+  columns:
+  - id
+  - first_name
+  - last_name
+  - mailing_address
+  - city
+  - zipcode
+  - primary_phone
+  - email_address
+  - housing_type
+  - housing_payment
+  - gross_income
+  - employer
+  - marital_status
+  - social_security_number
+  - mothers_maiden_name
+  - created_at
+  - updated_at
+  - state
+  - employment_status
+  - birth_date
+  records: 
+  - - 1
+    - Test
+    - Tester
+    - 123 Fake ST
+    - Fakersville
+    - '84601'
+    - '4356090001'
+    - test@fake.com
+    - Select Your Housing
+    - '0'
+    - '62000'
+    - Fake Inc
+    - 
+    - '646040001'
+    - Green
+    - '2018-07-20 21:00:27.610601'
+    - '2018-07-24 14:16:29.700138'
+    - Select Your State
+    - Employment Status
+    - '09181980'
+  - - 2
+    - James
+    - Ferdinand
+    - 325 Delmonte Lane
+    - South Jordan
+    - '84095'
+    - '4356300002'
+    - james@free.com
+    - Own
+    - '0'
+    - '60000'
+    - Ferdinand LLC
+    - 
+    - '529010001'
+    - Congivee
+    - '2018-07-23 22:31:44.595115'
+    - '2018-07-23 22:31:44.595115'
+    - UT
+    - Employed
+    - '09181980'

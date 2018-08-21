@@ -4,7 +4,7 @@ module HousingHelper
       ['Select Your Housing', 'Select Your Housing'],
       ['Rent', 'Rent'],
       ['Own', 'Own'],
-      ['Other', 'Other'],
+      ['Other', 'Other']
     ]
   end
 end

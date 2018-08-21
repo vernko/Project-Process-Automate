@@ -25,6 +25,11 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @client = Client.new(client_params)
+    @client.populate
+    @client.personal_info
+    @client.financial_info
+    @client.security_info
+    @client.review_submit
 
     respond_to do |format|
       if @client.save
@@ -80,7 +85,9 @@ class ClientsController < ApplicationController
                                      :housing_type,
                                      :housing_payment,
                                      :gross_income,
+                                     :employment_status,
                                      :employer,
+                                     :birth_date,
                                      :social_security_number,
                                      :mothers_maiden_name)
     end

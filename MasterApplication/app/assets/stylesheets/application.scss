@@ -1,11 +1,9 @@
 @import "bootstrap";
 
 body {
-  .background-form {
-    background: url("business_background.jpg");
+    background: url("business_background.jpg") no-repeat center center fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
-  }
+    background-size: cover;
 }
 
 h1 {
@@ -32,6 +30,13 @@ h1 {
   margin-bottom: 30px;
  }
 
+h1,
+.show-card,
+.application-header,
+.table-body {
+  color: black;
+}
+
 input {
   width: 100%;
   padding: 5px;
@@ -42,16 +47,29 @@ input {
 }
 
  .btn-primary {
-   background-color: #2baea4;
+   background-color: #47d53b;
    border-color: rgb(179, 177, 177);
-   color: #333;
+   color: #fff;
 
    &:hover {
-     background-color: #1d837a;
-     border-color: rgb(179, 177, 177);
+     background-color: #45e437;
+     border-color: rgb(245, 240, 240);
    }
  }
 
  .back-link {
    color: rgb(179, 177, 177);
  }
+
+ .show-list {
+   color: #fff;
+ }
+
+ h1 {
+   text-align: center;
+ }
+
+.index-table-layout {
+  background-color: whitesmoke;
+  opacity: 0.90;
+}
